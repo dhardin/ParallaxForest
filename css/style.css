@@ -1,0 +1,52 @@
+
+body {
+	background-color: #C8C8C8;
+}
+
+#container {
+	position: absolute;
+	top: 10%;
+	height: 950px;
+	overflow: hidden;
+}
+
+
+
+.forest_row {
+	  white-space: nowrap;
+    font-size: 0;
+}
+
+.forest {
+	display: inline-block;
+	margin-left: -20px;
+	width: 300px;
+	height: 300px;
+	background-repeat: no-repeat; 	
+	background-size: cover;
+}
+
+.forest_0 {
+	background-image: url("../img/forest_0.png");
+}
+
+.forest_1 {
+	background-image: url("../img/forest_1.png");
+}
+
+.forest_2 {
+	background-image: url("../img/forest_2.png");
+}
+
+.forest_3 {
+	background-image: url("../img/forest_3.png");
+}
+
+.forest_4 {
+	background-image: url("../img/forest_4.png");
+}
+
+.forest_5 {
+	background-image: url("../img/forest_5.png");
+}
+

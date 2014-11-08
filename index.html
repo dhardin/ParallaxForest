@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
+	  <meta http=equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+	 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
 <body>
+	<div id="container">
+	</div>
+	
+	<script type="text/javascript">	
+	var speed = 5,
+		num_layers = 5,
+		num_tree_blocks = 20,
+		$container = $('#container'),
+		$forest = $('<div class="forest"></div>'),
+		$forest_row = $('<div class="forest_row"></div>'),
+		$row, rand_top;
+
+
+	$(document).ready(function(){
+		//add rows of forests
+		for(var i = num_layers; i >= 0; i--){
+			$row = $('<div class="forest_row"></div>');
+			if (i != num_layers) {
+				$row.css('margin-top', '-' + 40* (num_layers - i + 1) + 'px');
+			} else {
+				$row.css('margin-bottom',  '-' + 100 + 'px');
+			}
+			$container.append($row);
+			//populate row with trees
+			for (var j = 0; j < num_tree_blocks; j++){
+				$forest_block = $('<div class="forest"></div>');
+				$forest_block.addClass('forest_' + i);
+				rand_top = Math.floor((Math.random() * 40));
+				rand_top += (num_layers == i ? 20 : -20)
+				$forest_block.css('background-position', "0px " + rand_top.toString() + 'px');
+				//add forest block to row
+				$row.append($forest_block);
+			}
+		}
+
+	});
+	</script>
 </body>
 </html>
