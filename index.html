@@ -47,9 +47,11 @@
 
 		var bird_chance;
 
+		 generate_bird();
+
 		setInterval(function(){
 			bird_chance = Math.floor((Math.random() * 100) );
-			if(bird_chance > 50){
+			if(bird_chance > 60){
 				generate_bird();
 			}
 		}, 3000);
