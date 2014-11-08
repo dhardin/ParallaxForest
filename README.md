@@ -1,3 +1,3 @@
 ParallaxForest
 ==============
-![Screenshot]https://github.com/dhardin/ParallaxForest/blob/master/img/sample.PNG)
+![Screenshot](https://raw.githubusercontent.com/dhardin/ParallaxForest/master/img/sample.PNG)
