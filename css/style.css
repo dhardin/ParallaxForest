@@ -16,7 +16,7 @@ html, body, #container {
 		width: 42px;
 		height: 57px;
 		position: absolute;
-		right: 0;
+		right: -42px;
 		border:0;
 }
 
