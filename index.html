@@ -64,7 +64,7 @@
 
 	function generate_bird(){
 			var $bird = $('<div class="bird"/>'),
-				rand_top  = Math.floor((Math.random() * 100));
+				rand_top  = Math.floor((Math.random() * 100) - 20);
 
 			$bird.css('top', rand_top + '%');
 			$('body').append($bird);
