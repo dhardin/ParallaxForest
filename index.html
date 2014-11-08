@@ -40,7 +40,40 @@
 				//add forest block to row
 				$row.append($forest_block);
 			}
+
+	
+
 		}
+
+		var frames = 5,
+		frame_width= 42,
+		current_position = 0,
+		bird_chance;
+
+		setInterval(function(){
+			bird_chance = Math.floor((Math.random() * 100) );
+			if(bird_chance > 70){
+				var $bird = $('<div class="bird"/>'),
+					rand_top  = Math.floor((Math.random() * 100));
+
+					$bird.css('top', rand_top + '%');
+				$('body').append($bird);
+			}
+		}, 2000);
+
+		setInterval(function(){
+			$('.bird').each(function(){
+				var current_position = parseInt($(this).css('backgroundPosition').split(" ")[0]) + frame_width;
+				$(this).css({
+					'background-position': current_position + 'px',
+					 'left': $(this).position().left - 10 + "px"
+				});
+
+				if($(this).position.left < -20){
+					$(this).remove();
+				}
+			});
+		}, 100);
 
 	});
 	</script>
